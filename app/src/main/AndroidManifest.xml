@@ -51,6 +51,10 @@
                 android:name="androidx.work.WorkManagerInitializer"
                 android:value="androidx.startup"
                 tools:node="remove" />
+            <meta-data
+                android:name="com.google.samples.apps.ComposeInitializer"
+                android:value="androidx.startup"
+                />
         </provider>
 
         <profileable
