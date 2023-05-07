@@ -16,10 +16,10 @@
 
 package com.google.samples.apps.sunflower.macrobenchmark
 
+import android.util.Log
 import androidx.benchmark.macro.CompilationMode
 import androidx.benchmark.macro.FrameTimingMetric
 import androidx.benchmark.macro.MacrobenchmarkScope
-import androidx.benchmark.macro.StartupMode
 import androidx.benchmark.macro.junit4.MacrobenchmarkRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.By
@@ -53,8 +53,10 @@ class PlantDetailBenchmarks {
                 pressHome()
                 startActivityAndWait()
                 goToPlantListTab()
+                Log.d("Benchmark", "setupBlock iteration=$iteration")
             }
         ) {
+            Log.d("Benchmark", "measureBlock iteration=$iteration")
             goToPlantDetail()
         }
 }
