@@ -52,9 +52,9 @@ class PlantListBenchmarks {
             startupMode = StartupMode.COLD,
             setupBlock = {
                 pressHome()
+                startActivityAndWait()
             }
         ) {
-            startActivityAndWait()
             goToPlantListTab()
         }
 }
