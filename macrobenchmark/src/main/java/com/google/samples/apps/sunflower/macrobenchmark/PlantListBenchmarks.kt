@@ -49,12 +49,12 @@ class PlantListBenchmarks {
             metrics = listOf(StartupTimingMetric(), FrameTimingMetric()),
             compilationMode = compilationMode,
             iterations = 10,
-            startupMode = StartupMode.COLD,
+            startupMode = null,
             setupBlock = {
                 pressHome()
+                startActivityAndWait()
             }
         ) {
-            startActivityAndWait()
             goToPlantListTab()
         }
 }

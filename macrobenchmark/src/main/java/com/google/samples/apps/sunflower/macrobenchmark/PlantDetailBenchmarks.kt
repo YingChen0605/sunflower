@@ -48,13 +48,13 @@ class PlantDetailBenchmarks {
             metrics = listOf(FrameTimingMetric()),
             compilationMode = compilationMode,
             iterations = 10,
-            startupMode = StartupMode.COLD,
+            startupMode = null,
             setupBlock = {
                 pressHome()
+                startActivityAndWait()
+                goToPlantListTab()
             }
         ) {
-            startActivityAndWait()
-            goToPlantListTab()
             goToPlantDetail()
         }
 }
